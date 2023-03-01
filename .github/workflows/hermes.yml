@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 German Aerospace Center (DLR), Helmholtz-Zentrum Drseden-Rossendorf, Forschungszentrum Jülich
+#
+# SPDX-License-Identifier: CC0-1.0
+
 name: Software publication on Zenodo Sandbox
 
 on:
