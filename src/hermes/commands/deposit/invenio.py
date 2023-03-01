@@ -205,7 +205,7 @@ def _codemeta_to_invenio_deposition(metadata: dict) -> dict:
     ]
 
     version = metadata["version"]
-    
+
     description = metadata["description"]
 
     # TODO: Use the fields currently set to `None`.
