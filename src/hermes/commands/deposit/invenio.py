@@ -204,6 +204,10 @@ def _codemeta_to_invenio_deposition(metadata: dict) -> dict:
         for contributor in metadata["contributor"] if contributor.get("name") != "GitHub"
     ]
 
+    version = metadata["version"]
+    
+    description = metadata["description"]
+
     # TODO: Use the fields currently set to `None`.
     # Some more fields are available but they most likely don't relate to software
     # publications targeted by hermes.
@@ -222,7 +226,7 @@ def _codemeta_to_invenio_deposition(metadata: dict) -> dict:
         # TODO: Use a real description here. Possible sources could be
         # `tool.poetry.description` from pyproject.toml or `abstract` from
         # CITATION.cff. This should then be stored in codemeta description field.
-        "description": metadata["name"],
+        "description": description,
         # TODO: Get from config. This needs to be specified; we can not guess this.
         # TODO: Needs some more logic:
         # Possible options are: open, embargoed, restricted, closed. open and
@@ -256,7 +260,7 @@ def _codemeta_to_invenio_deposition(metadata: dict) -> dict:
         "grants": None,
         "subjects": None,
         # TODO: Get this from config
-        "version": None,
+        "version": version,
     }.items() if v is not None}
 
     return deposition_metadata
