@@ -10,6 +10,7 @@
 
 cff-version: 1.2.0
 title: hermes
+version: "proof-of-concept"
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
